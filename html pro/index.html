@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="category.html">Category</a>
+  <a href="about.html">About Us</a>
+</nav>
+
+<div class="quiz-container">
+  <h1>Welcome to Quiz Website</h1>
+  <h2>General Aptitude</h2>
+
+  <button onclick="startQuiz('Numerical Aptitude')">Numerical Aptitude</button>
+  <button onclick="startQuiz('Quantitative Aptitude')">Quantitative Aptitude</button>
+<button onclick="startQuiz('Logical Reasoning')">Logical Reasoning</button>
+<button onclick="startQuiz('Non-Verbal/Series')">Non-Verbal/Series</button>
+<button onclick="startQuiz('Verbal Aptitude')">Verbal Aptitude</button>
+</div>
+<div class="quiz-container">
+  <h2>General Knowledge</h2>
+<button onclick="startQuiz('Indian Polity')">Indian Polity</button>
+<button onclick="startQuiz('Indian Economy')">Indian Economy</button>
+<button onclick="startQuiz('Geography')">Geography</button>
+<button onclick="startQuiz('Science&Technology')">Science&Technology</button>
+<button onclick="startQuiz('Current affairs&General awareness')">Current affairs&General awareness</button>
+</div>
+<script>
+function startQuiz(type){
+  localStorage.setItem("quizType", type);
+  window.location.href = "quiz.html";
+}
+</script>
+
+<script>
+if(localStorage.getItem("login")!=="true"){
+  window.location.href="login.html";
+}
+</script>
+<button onclick="logout()">Logout</button>
+<script>
+function logout(){
+  localStorage.removeItem("login");
+  window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
+
+

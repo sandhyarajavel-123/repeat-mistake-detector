@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="category.html">Category</a>
+  <a href="about.html">About Us</a>
+</nav>
+
+<div class="quiz-container">
+  <p id="error-message"
+  class="error-message"></p>
+  <h2 id="quiz-title"></h2>
+  <p id="question-number"></p>
+  <h3 id="question-text"></h3>
+  <div id="options-container"></div>
+  <p id="message"></p>
+  <p>time left: <span id="timer">15</span>s</p>
+  
+</div>
+<div class="box"></div>
+<script src="script.js"></script>
+
+<script>
+if(localStorage.getItem("login")!=="true"){
+  window.location.href="login.html";
+}
+</script>
+</body>
+</html>

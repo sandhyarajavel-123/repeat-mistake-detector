@@ -1,0 +1,124 @@
+body {
+  font-family: Arial;
+  background-image: url("bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+body {
+  font-family: Arial;
+  background-image: url("bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+nav {
+  background: hsl(0, 0%, 2%);
+  padding: 10px;
+}
+nav a {
+  color: lab(93.77% 1.68 0.58 / 0.895);
+  margin-right: 60px;
+  text-decoration: none;
+}
+.quiz-container {
+  background: rgba(250, 249, 250, 0.9);
+  width: 420px;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+button {
+  width: 90%;
+  padding: 10px;
+  margin: 8px;
+  cursor: pointer;
+}
+.option-btn {
+  display: block;
+  margin: 8px auto;
+  padding: 8px 15px;
+  width: 60%;
+  cursor: pointer;
+}
+
+.correct {
+  background: green;
+  color: white;
+}
+
+.wrong {
+  background: red;
+  color: white;
+}
+.error-text {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.blocked {
+  background: gray;
+  cursor: not-allowed;
+}
+#error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.wrong {
+  background-color: red;
+  color: white;
+}
+#error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+
+  animation: shake 0.4s;
+}
+
+/* shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* correct animation */
+.correct {
+  background-color: green;
+  color: white;
+  animation: correctAnim 0.5s;
+}
+
+@keyframes correctAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* wrong animation */
+.wrong {
+  background-color: red;
+  color: white;
+  animation: wrongAnim 0.4s;
+}
+
+@keyframes wrongAnim {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0); }
+}

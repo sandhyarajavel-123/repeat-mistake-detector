@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>Login</h2>
+
+  <input type="text" id="loginUser" placeholder="Username"><br><br>
+  <input type="password" id="loginPass" placeholder="Password"><br><br>
+
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login(){
+  let u = document.getElementById("loginUser").value;
+  let p = document.getElementById("loginPass").value;
+
+  if(
+    u === localStorage.getItem("username") &&
+    p === localStorage.getItem("password")
+  ){
+    localStorage.setItem("login","true");
+    window.location.href="index.html";
+  }else{
+    alert("Invalid Username or Password");
+  }
+}
+</script>
+
+</body>
+</html>

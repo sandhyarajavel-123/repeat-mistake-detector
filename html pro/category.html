@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Category</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="category.html">Category</a>
+  <a href="about.html">About Us</a>
+</nav>
+
+<div class="quiz-container">
+  <h1>Select Exam Category</h1>
+
+  <button onclick="startQuiz('Bank')">Bank Exam</button>
+  <button onclick="startQuiz('TNPSC')">TNPSC Exam</button>
+</div>
+
+<script>
+function startQuiz(type){
+  localStorage.setItem("quizType", type);
+  window.location.href = "quiz.html";
+}
+</script>
+
+</body>
+</html>
